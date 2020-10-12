@@ -3,11 +3,16 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.videopoint.kafka</groupId>
-	<artifactId>simple-producer</artifactId>
+	<artifactId>simple-consumer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>simple-consumer-example</name>
 	<description>Simple example of use Kafka Consumer API</description>
 
+	<properties>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+	</properties>
+	
 	<dependencies>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients -->
@@ -19,6 +24,7 @@
 
 	</dependencies>
 
+	<!-- mvn package -->
 	<build>
 		<plugins>
 			<plugin>

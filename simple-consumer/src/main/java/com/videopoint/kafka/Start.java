@@ -21,7 +21,7 @@ public class Start {
 		consumerSettings.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
 		consumerSettings.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
 
-		KafkaConsumer kafkaConsumer = new KafkaConsumer(Commons.getProperties(consumerSettings));
+		KafkaConsumer<String, String> kafkaConsumer = new KafkaConsumer<String, String>(Commons.getProperties(consumerSettings));
 		kafkaConsumer.subscribe(Arrays.asList("my-test-topic"));
 
 		while (true) {
