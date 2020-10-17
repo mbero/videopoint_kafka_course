@@ -16,6 +16,13 @@
 
 	<dependencies>
 
+		<!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka-streams -->
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-streams</artifactId>
+			<version>2.6.0</version>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients -->
 		<dependency>
 			<groupId>org.apache.kafka</groupId>
@@ -42,7 +49,7 @@
 							<transformers>
 								<transformer
 									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>com.videopoint.kafka.Start</mainClass>
+									<mainClass>com.videopoint.kafka.WordCountDemo</mainClass>
 								</transformer>
 							</transformers>
 						</configuration>
