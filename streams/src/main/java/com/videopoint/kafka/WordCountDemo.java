@@ -65,13 +65,13 @@ public final class WordCountDemo {
     static void createWordCountStream(final StreamsBuilder builder) {
         final KStream<String, String> source = builder.stream(INPUT_TOPIC);
 
-        final KTable<String, Long> counts = source
+        final KTable<String, String> counts = source
             .flatMapValues(value -> Arrays.asList(value.toLowerCase(Locale.getDefault()).split(" ")))
             .groupBy((key, value) -> value)
-            .count();
+            .count().mapValues(value-> value.toString());
 
         // need to override value serde to Long type
-        counts.toStream().to(OUTPUT_TOPIC, Produced.with(Serdes.String(), Serdes.Long()));
+        counts.toStream().to(OUTPUT_TOPIC, Produced.with(Serdes.String(), Serdes.String()));
     }
 
     public static void main(final String[] args) {
