@@ -76,7 +76,6 @@ public final class WordCountDemo {
 
     public static void main(final String[] args) {
         final Properties props = getStreamsConfig();
-
         final StreamsBuilder builder = new StreamsBuilder();
         createWordCountStream(builder);
         final KafkaStreams streams = new KafkaStreams(builder.build(), props);
