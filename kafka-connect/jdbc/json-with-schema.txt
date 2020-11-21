@@ -1,0 +1,23 @@
+{
+  "schema": {
+    "type": "struct",
+    "fields": [
+      {
+        "type": "int64",
+        "optional": false,
+        "field": "id"
+      },
+      {
+        "type": "string",
+        "optional": false,
+        "field": "value"
+      }
+    ],
+    "optional": false,
+    "name": "ksql.users"
+  },
+  "payload": {
+    "id": 123,
+    "value": "someValue1"
+  }
+}

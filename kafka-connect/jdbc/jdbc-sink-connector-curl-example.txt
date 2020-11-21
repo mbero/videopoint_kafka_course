@@ -1,0 +1,12 @@
+curl -X POST http://localhost:8083/connectors -H "Content-Type: application/json" -d '{
+      "name": "jdbc_sink_mysql ",
+      "config": {
+              "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+              "connection.url": "jdbc:mysql://127.0.0.1:3306/connect_test",
+              "connection.user": "SOME_USERNAME",
+              "connection.password": "SOME_PASSWORD",
+              "topics": "test",
+			 "auto.create": "true",
+			 "tasks.max": "1"
+	  }
+ }' http://localhost:8083/connectors
