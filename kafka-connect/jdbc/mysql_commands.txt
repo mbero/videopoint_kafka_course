@@ -1,0 +1,15 @@
+//Some MySQL commands
+
+sudo apt update
+sudo apt install mysql-server 
+sudo mysql_secure_installation
+sudo service mysql start
+
+mysql> CREATE USER 'username'@'localhost' IDENTIFIED BY 'desired_password';
+mysql> GRANT ALL PRIVILEGES ON db_name.* TO 'username'@'localhost' WITH GRANT OPTION;
+
+
+
+
+CREATE TABLE test_jdbc_source (id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,  value VARCHAR(20));
+INSERT INTO `test_jdbc_source` (`value`) VALUES ('someValue1');

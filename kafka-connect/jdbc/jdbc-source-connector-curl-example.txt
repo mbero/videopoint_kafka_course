@@ -1,0 +1,15 @@
+curl -X POST http://localhost:8083/connectors -H "Content-Type: application/json" -d '{
+      "name": "jdbc_source_mysql",
+      "config": {
+              "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+			  "tasks.max": "1",
+              "connection.url": "jdbc:mysql://127.0.0.1:3306/connect_test",
+              "connection.user": "SOME_USERNAME",
+              "connection.password": "SOME_PASSWORD",
+			  "mode" : "incrementing",
+			  "table.whitelist" : "test_jdbc_source",
+			  "topic.prefix" : "test_jdbc_",
+			  "incrementing.column.name": "id",
+			  "poll.interval.ms": 1000
+	  }
+ }' http://localhost:8083/connectors
