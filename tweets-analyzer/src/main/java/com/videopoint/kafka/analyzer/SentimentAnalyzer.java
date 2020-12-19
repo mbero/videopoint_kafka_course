@@ -46,17 +46,22 @@ public class SentimentAnalyzer {
 		switch (sentimentNumber) {
 		case 1:
 			sentimentStatus = SentimentStatus.VERY_NEGATIVE;
+			break;
 		case 2:
 			sentimentStatus = SentimentStatus.NEGATIVE;
+			break;
 		case 3:
 			sentimentStatus = SentimentStatus.NEUTRAL;
+			break;
 		case 4:
 			sentimentStatus = SentimentStatus.POSITIVE;
+			break;
 		case 5:
 			sentimentStatus = SentimentStatus.VERY_POSITIVE;
+			break;
 		default:
 			sentimentStatus = SentimentStatus.NEUTRAL;
-
+			break;
 		}
 
 		return sentimentStatus;
